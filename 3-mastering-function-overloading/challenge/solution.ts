@@ -1,4 +1,10 @@
-function sendMessage(content: string | { html: string }): void {
+type HTML = {
+  html: string;
+}
+
+function sendMessage(content: string): void ;
+function sendMessage(content: HTML): void ;
+function sendMessage(content: string | HTML): void {
   if (typeof content === "string") {
     console.log("Sending text message:", content);
   } else {
@@ -6,6 +12,32 @@ function sendMessage(content: string | { html: string }): void {
   }
 }
 
-// Usage examples
+// Usage example
 sendMessage("Hello, world!"); // Sends a text message
 sendMessage({ html: "<p>Hello, world!</p>" }); // Sends an HTML message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function sendMessage(content: string | { html: string }): void {
+  //if (typeof content === "string") {
+    //console.log("Sending text message:", content);
+  //} else {
+    //console.log("Sending HTML message:", content.html);
+  //}
+//}
+
+// Usage examples
+//sendMessage("Hello, world!"); // Sends a text message
+//sendMessage({ html: "<p>Hello, world!</p>" }); // Sends an HTML message
