@@ -2,8 +2,8 @@ import { Log, Authorize, Role } from './decorators';
 
 export class ProductManagement {
   @Log
-  @Role("admin");
-  @Authorize("admin");
+  @Authorize("admin")
+  @Role("admin")
   createProduct(name: string, price: number) {
     console.log(`Product created: ${name}, Price: ${price}`);
   }

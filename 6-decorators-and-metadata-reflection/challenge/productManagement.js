@@ -22,13 +22,12 @@ class ProductManagement {
 exports.ProductManagement = ProductManagement;
 __decorate([
     decorators_1.Log,
-    (0, decorators_1.Role)("admin"),
-    __metadata("design:type", Object)
-], ProductManagement.prototype, "", void 0);
-__decorate([
     (0, decorators_1.Authorize)("admin"),
-    __metadata("design:type", Object)
-], ProductManagement.prototype, "", void 0);
+    (0, decorators_1.Role)("user"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Number]),
+    __metadata("design:returntype", void 0)
+], ProductManagement.prototype, "createProduct", null);
 __decorate([
     decorators_1.Log,
     __metadata("design:type", Function),
