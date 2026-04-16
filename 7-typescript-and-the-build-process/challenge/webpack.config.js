@@ -3,9 +3,12 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   mode: 'production', // Enable production mode
-  entry: './src/app.ts',
+  entry: {
+    app: './src/app.ts',
+    largeModule: './src/largeModule.ts',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[contenthash]bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
